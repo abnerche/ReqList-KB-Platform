@@ -1,0 +1,10 @@
+# 依赖
+node_modules/
+dist/
+target/
+src-tauri/target/
+*.log
+
+# 本地数据（运行时生成）
+*.db
+exports/

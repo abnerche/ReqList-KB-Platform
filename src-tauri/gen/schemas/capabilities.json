@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"默认能力集：路径解析、对话框选择","local":true,"windows":["main"],"permissions":["core:path:default","dialog:default"]}}

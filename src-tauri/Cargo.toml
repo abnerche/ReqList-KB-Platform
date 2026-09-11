@@ -1,0 +1,27 @@
+[package]
+name = "req-kb-desktop"
+version = "0.4.0"
+description = "需求清单与知识库管理桌面应用"
+authors = ["you"]
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-dialog = { version = "2" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+chrono = { version = "0.4", features = ["serde"] }
+docx-rs = "0.4"
+image = { version = "0.25", default-features = false, features = ["png"] }
+base64 = { version = "0.22" }
+regex = "1"
+uuid = { version = "1", features = ["v4"] }
+
+[features]
+# 默认不开启 custom-protocol；Tauri 在 release 构建时自动处理
+custom-protocol = ["tauri/custom-protocol"]
